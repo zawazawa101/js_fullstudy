@@ -325,7 +325,7 @@ a img{
 .section .wrapper{
     zoom: 1;
 }
-section .wrapper:before, section .wrapper:after{
+ .section .wrapper:before, .section .wrapper:after{
     content: "\0020";
     display: block;
     clear: both;
@@ -449,4 +449,88 @@ h2{
 #anony-sns .notes li{
     margin-top: 12px;
     word-wrap: break word;
+}
+
+/* 第四个盒子anony-time样式 */
+.section:nth-child(2n){
+    padding: 40px 0 20px;
+    background: #f7f7f7;
+}
+.section .sidenav {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.section-title a{
+    font-size: 24px;
+}
+.section-title a:link, .section-title a:visited{
+    font-size: 24px;
+}
+#anony-time .section-title a{
+    color: #494949;
+}
+.section .side{
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+}
+.section .main{
+    overflow: hidden;
+    zoom: 1;
+}
+#anony-time .time-list li {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    margin-right: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#anony-time .time-list li .cover{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+#anony-time .time-list li .cover::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(top, transparent 0%,transparent 50%,rgba(0,0,0,0.2) 100%);
+}
+#anony-time .time-list li img{
+    width: 100px;
+    height: 141px;
+}
+#anony-time .time-list li .cover::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    bottom: 10px;
+    right: 10px;
+}
+#anony-time .time-list li .cover.audio:after{
+    background: url(https://img3.doubanio.com/f/sns/c831e5604c9caea0b53892bc84617d01ff8e2f73/pics/sns/time/ic_audio_w@2x.png) center/14px no-repeat;
+}
+#anony-time .time-list li .cover.video:after{
+    background: url(https://img3.doubanio.com/f/sns/2842ce5ff147343f9d488659bc80958d1bfe56b5/pics/sns/time/ic_video_w@2x.png)center/12px no-repeat;
+}
+
+#anony-time .time-list li .title {
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.38;
+}
+#anony-time .time-list li .type{
+    color: #999999;
+    line-height: 1;
+    margin-top: 10px;
+    display: block;
 }
