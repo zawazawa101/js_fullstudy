@@ -3,7 +3,7 @@ function Block(){
     this.downDivWrap = null // 底部管道
     this.downHeight = baseObj.randomNum(0,150) //下部管道高度
     this.gapHeight = baseObj.randomNum(150,160)
-     this.blockRunTimer = null
+    this.blockRunTimer = null
     
     this.upHeight = 363 - this.downHeight - this.gapHeight
     
@@ -34,22 +34,28 @@ function Block(){
         this.downDivWrap.appendChild(downDiv1)
         
         jsWrapBg.appendChild(this.upDivWrap)
-        jsWrapBg.appendChild(this.downDivWrap)
+        jsWrapBg.appendChild(this.downDivWrap)//在页面中放入管道
         
-        this.blockRun()
+      
         
         
-    }, 
-    this.blockRun = function(){
-        var that = this
-        this.blockRunTimer = setInterval(run,60)
-        function run() {
-           if(that.downDivWrap.offsetLeft < -60){
-               clearInterval(that.blockRunTimer)
-           }
-           that.downDivWrap.style.left = that.downDivWrap.offsetLeft-3 + 'px'
-           that.upDivWrap.style.left = that.upDivWrap.offsetLeft-3 + 'px' 
-        }
+    }
+    // this.blockRun = function(){
+    //     var that = this
+    //     this.blockRunTimer = setInterval(run,60)
+    //     function run() {
+    //        if(that.downDivWrap.offsetLeft < -60){
+    //            clearInterval(that.blockRunTimer)
+    //        }
+    //        that.downDivWrap.style.left = that.downDivWrap.offsetLeft-3 + 'px'
+    //        that.upDivWrap.style.left = that.upDivWrap.offsetLeft-3 + 'px' 
+    //     }
+    // }
+    this.moveBlock = function() {//控制管道移动的方法
+        this.upDivWrap.style.left = this.upDivWrap.offsetLeft - 3 + 'px'
+        this.downDivWrap.style.left = this.downDivWrap.offsetLeft - 3 + 'px'
+        
+
     }
  
     
