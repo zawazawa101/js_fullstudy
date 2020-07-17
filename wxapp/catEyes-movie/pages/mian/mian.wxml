@@ -1,0 +1,41 @@
+<!--pages/mian/mian.wxml-->
+<view class = "container">
+  <scroll-view scroll-y style = "height: 100%">
+    <view class="header">
+      <view class="header_hd">
+        <text>南昌</text>
+        <view class="downtips"></view>
+      </view>
+      <view class="header_bd">
+      <view class="header_bd-hot header_bd-btn" style="color:{{isLeft?'#ef4238':'#666666'}}" bindtap="tabChangeHot">正在上映</view>
+        <view class="header_bd-wating header_bd-btn" style="color:{{isLeft?'#666666':'#ef4238'}}" bindtap="tabChangeWaiting">即将上映</view>
+      <view class="bottomLine" style="left:{{isLeft?'129px':'199px'}}"></view>
+      </view>
+      <view class="header_ft">
+        <image src="../../images/search.png" alt=""></image>
+      </view>
+    </view>
+
+    <swiper autoplay="{{autoplay}}" interval="100" indicator-dots circular interval = "1000" >
+      <swiper-item wx:for="{{imgUrls}}" wx:key="index">
+        <image class="slide-image" src="{{item}}"></image> 
+      </swiper-item>
+    </swiper>
+
+    <view wx:for="{{movieList}}" wx:key="{{index}}">
+      <view class="flex item">
+        <view class="item_left">
+          <image src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="item_middle"> 
+          <view class="movie_title"></view>
+          <view class=""></view>
+          <view class="title"></view>
+          
+        </view>
+        <view class="item_right"> dffd</view>
+      </view>
+    </view>
+
+  </scroll-view>
+</view>
