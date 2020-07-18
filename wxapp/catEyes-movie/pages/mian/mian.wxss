@@ -93,3 +93,38 @@
   padding-top: 5px;
   float: left;
 }
+.movie_title{
+  font-size: 17px;
+  color: #333333;
+  font-weight: 700;
+  padding-right: 5px;
+}
+.movie_actor,.release_time{
+  font-size: 13px;
+  color: #666666;
+  overflow: hidden;
+  width: 180px;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.item_right{
+  position: absolute; 
+  top: 40px;
+  right: 20px;
+  text-align: center;
+}
+
+.btn{
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+}

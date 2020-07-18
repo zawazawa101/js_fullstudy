@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    //把屏幕等分成为10份  1 rem = 屏幕宽度 / 10
+    var ratio = 1 / window.devicePixelRatio
+    var meta = document.createElement('meta')
+    meta.name = 'viewport'
+    meta.content = 'initial-scale=' + ratio
+    var head = document.querySelector('head')
+    head.appendChild(meta)
+
+    var width = window.innerWidth  / 10
+    var html = document.querySelector('html') 
+    html.style.fontSize = width + 'px' //1rem = html的font-size 
+  </script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+      /* 不同的设备来调整 html的 font-size */
+      /* 调整多少？？ 结合设计稿 */
+      /* 设备的物理像素 / 逻辑像素(css：1px) = DPR */
+      
+    
+    /* div{
+      /* font-size: 30px;
+      width: 3rem;
+      height: 3rem; */
+      /* background-color: green; */
+    /* } */ 
+    input{
+      width: 5.92rem;
+      height: 0.74666666666667rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <div>
+    <input >
+  </div>
+</body>
+</html>

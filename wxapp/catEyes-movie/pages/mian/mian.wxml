@@ -28,12 +28,13 @@
           <image src="{{item.imgUrl}}"></image>
         </view>
         <view class="item_middle"> 
-          <view class="movie_title"></view>
-          <view class=""></view>
-          <view class="title"></view>
-          
+          <view class="movie_title">{{item.name}}</view>
+          <view class="movie_actor">{{item.actor}}</view>
+          <view class="release_time">{{item.time}}</view>
         </view>
-        <view class="item_right"> dffd</view>
+        <view class="item_right">
+          <span class="btn" style="background-color:{{item.isShow?'#E54847':'#FAAF00'}}">{{item.isShow?"想看":"热映"}}</span>
+        </view>
       </view>
     </view>
 
