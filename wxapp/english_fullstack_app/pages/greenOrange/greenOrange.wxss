@@ -1,0 +1,99 @@
+/* pages/greenOrange/greenOrange.wxss */
+.header-bicycleType{
+  display: flex;
+  width: 100%;
+  padding: 10rpx 0;
+  justify-content: center;
+}
+.header-bicycle{
+  flex:0.5;
+  font-size: 30rpx;
+  color: #18cfb4;
+  display: flex;
+  justify-content: center;
+}
+.header-electricBicycle{
+  flex:0.5;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.header-selectedBicycleLine{
+ width: 75rpx;
+ height: 7rpx;
+ background-color: #18cfb4;
+ position: relative;
+ left: 150rpx;
+ top: 0;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  background-color: #fff;
+  border-top-left-radius: 56rpx;
+  border-top-right-radius: 56rpx;
+  padding:60rpx 30rpx 0 ;
+}
+.wrapper{
+  overflow: hidden;
+}
+.footer-prompt{
+  float: left;
+}
+.footer-pic{
+  float: left;
+  margin-left: 132rpx;
+  width: 138rpx;
+  height: 128rpx;
+  text-align: center;
+}
+.footer-pic image{
+  width: 100%;
+  height: 100%;
+}
+.footer-prompt__title text{
+  font-size: 38rpx;
+  font-weight: 550;
+  margin-left: 10rpx;
+  letter-spacing: 1rpx;
+}
+.footer-promot__titleText{
+  margin-top: 23rpx;
+  margin-left: 10rpx;
+  color: #666666;
+  font-size: 25rpx;
+}
+.btn{
+  margin-top: 110rpx;
+  height: 80rpx;
+  width: 100%;
+  background-color: #18cfb4;
+  text-align: center;
+  border-radius:5px;
+}
+.btn text{
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}
+/* .footer-downLine{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+}
+.footer-downLine_line{
+  width: 60%;
+  height: 6rpx;
+  background-color: black;
+} */
+.footer-downLine{
+  width: 100%;
+  height: 10px;
+  background-color: black;
+}

@@ -1,0 +1,43 @@
+<!--pages/greenOrange/greenOrange.wxml-->
+<view class="bookCar">
+  <!-- <scroll-view scorllx scrolly style="width:100%"> -->
+    <view class="header">
+      <view class="header-bicycleType">
+        <view class="header-bicycle">
+          单车
+        </view>
+        <view class="header-electricBicycle">
+          电单车
+        </view>
+      </view>
+      <view class="header-selectedBicycleLine"></view>
+    </view>
+    
+    <map id = "map" 
+     longitude="113.324520" latitude="23.099994" 
+     style = "width : 100% ; height : 92vh; position : relative"
+     markers="{{markers}}"
+     >
+    <cover-view class="footer">
+      <view class="wrapper">
+        <view class="footer-prompt">
+          <veiw class="footer-prompt__title">
+            <text>遵守交规</text>
+            <text>安全骑行</text>
+          </veiw>
+          <view class="footer-promot__titleText">骑行时请遵守交通法规，注意安全骑行</view>
+        </view>
+        <view class="footer-pic">
+          <image src= "../image/1.png" ></image>
+        </view>
+      </view>
+      <view class="btn" >
+      <text>扫描用车</text>
+      </view>
+      <view class="footer-downLine">
+         <view class="footer-downLine_line"></view>
+      </view>
+    </cover-view>
+    </map>
+  <!-- </scroll-view> -->
+</view>
