@@ -41,6 +41,4 @@
 // var a = 'aa'
 // console.log(a)
 
-let a = 'a'
-let a = 'aa'
-console.log(a)
+

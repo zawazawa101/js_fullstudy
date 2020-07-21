@@ -1,0 +1,14 @@
+/* pages/cart/cart.wxss */
+swiper{
+  height: 421rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.selected{
+  padding: 30rpx 0;
+}
+.select-title{
+  text-align: center;
+}

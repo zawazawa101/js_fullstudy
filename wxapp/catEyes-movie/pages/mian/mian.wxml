@@ -8,7 +8,7 @@
       </view>
       <view class="header_bd">
       <view class="header_bd-hot header_bd-btn" style="color:{{isLeft?'#ef4238':'#666666'}}" bindtap="tabChangeHot">正在上映</view>
-        <view class="header_bd-wating header_bd-btn" style="color:{{isLeft?'#666666':'#ef4238'}}" bindtap="tabChangeWaiting">即将上映</view>
+      <view class="header_bd-wating header_bd-btn" style="color:{{isLeft?'#666666':'#ef4238'}}" bindtap="tabChangeWaiting">即将上映</view>
       <view class="bottomLine" style="left:{{isLeft?'129px':'199px'}}"></view>
       </view>
       <view class="header_ft">

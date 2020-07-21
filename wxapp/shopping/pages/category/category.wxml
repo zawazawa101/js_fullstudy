@@ -1,0 +1,26 @@
+<view class="category">
+    
+ 
+  <view class="snacks-type"> 
+      <view class="snacks-type-name" bindtap="scroll" id="{{item.id}}" wx:for = "{{category}}" wx:key="index">{{item.name}}</view>
+  </view>
+  
+  <scroll-view class="main" scroll-with-animation scroll-into-view="{{intoindex}}" scroll-y="true">
+    <block wx:for = "{{detail}}" wx:key="index">
+      <view class="content" id="{{item.id}}">
+        <view class="content-banner">
+          <image src="{{item.banner}}"></image>
+        </view>
+        <view class="content-cate">
+          <text>{{item.cate}}</text>
+        </view>
+        <view class="content-detail" wx:for = "{{item.detail}}" wx:key="index" wx:for-item="detail">
+            <view class="content-detail-thumb">
+              <image src="{{detail.thumb}}" />
+            </view>
+            <view class="content-detail-name">{{detail.name}}</view>
+        </view> 
+      </view> 
+    </block>
+  </scroll-view>
+</view>
