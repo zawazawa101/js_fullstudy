@@ -6,7 +6,8 @@ Page({
    */ 
  
   data: {
-    intoindex: "guowei", 
+    
+    name: "guowei", 
     category:[
       { name: '果味', id: 'guowei' },
       { name: '蔬菜', id: 'shucai' },
