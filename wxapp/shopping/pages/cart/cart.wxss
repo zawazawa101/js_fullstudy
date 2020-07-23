@@ -83,6 +83,7 @@
 }
 .return_pic{
   display: inline-block;
+  vertical-align: middle;
   width: 32rpx;
   height: 32rpx;
 }
@@ -91,5 +92,5 @@
   height: 100%;
 }
 .cart-total-price{
-  margin-right: 480rpx;
+  margin-right: 400rpx;
 }

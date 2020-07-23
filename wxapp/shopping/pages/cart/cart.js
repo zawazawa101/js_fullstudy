@@ -5,16 +5,63 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isSelected: 1,
     carts:[],
-    totalPrice: 0
-
+    totalPrice: 0,
+    selectAllStatus: true
+    
   },
-  changeSelected() {
+  selectAll(){
+    // 来回改变数据源中的selectAllStatus
+    let selectAllStatus = this.data.selectAllStatus
+    selectAllStatus = !selectAllStatus
+    let carts = this.data.carts
+    // 把carts数据里面的每一条数据里面的select改成false
+    for(var i = 0; i < carts.length; i++){
+      carts[i].selected = selectAllStatus
+    }
     this.setData({
-      isSelected: this.isSelected++
+      selectAllStatus: selectAllStatus,
+      carts: carts
     })
-    console.log(this.isSelected)
+    this.getTotalPrice()
+  },
+  selectList(e){
+    console.log(e)
+    // 让当前这条数据里面的selected的值取反
+    let index = e.currentTarget.dataset.index
+    let selected = `carts[${index}].selected`
+    this.setData({
+      [selected]: !this.data.carts[index].selected
+    })
+    this.getTotalPrice()
+    // 但凡carts数组中存在一条数据里面的select不为true 全选按钮就不能被勾选
+    let carts = this.data.carts
+    for (let i = 0; i < carts.length; i++){
+      if(!carts[i].selected){
+        this.setData({
+          selectAllStatus: false
+        })
+      break
+      }
+      else{
+        this.setData({
+          selectAllStatus: true
+        })
+      }
+    }
+  },
+  getTotalPrice(){
+    //拿到carts数组中的每一条selected为true的数据，用数量*单价
+    let totalPrice = 0
+    let carts = this.data.carts
+    for(let i = 0; i < carts.length; i++){
+      if(carts[i].selected){
+        totalPrice += carts[i].num*carts[i].price
+      }
+    }
+    this.setData({
+      totalPrice: totalPrice.toFixed(2)
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -41,7 +88,8 @@ Page({
           { id: 1, title: '新鲜芹菜 半斤', image: '/image/s5.png', num: 4, price: 0.01, selected: true },
           { id: 2, title: '素米 500g', image: '/image/s6.png', num: 1, price: 0.03, selected: true }
         ]
-      })
+      }),
+      this.getTotalPrice()
     },1000)
   },
 
