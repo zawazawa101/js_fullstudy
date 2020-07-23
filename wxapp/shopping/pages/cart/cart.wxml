@@ -11,12 +11,12 @@
          <text class="cart-pro-name">{{item.title}}</text>
          <text class="cart-pro-price">{{item.price}}</text>
 
-         <view class="cart-count-box">
-           <text class="cart-count-down">-</text>
-           <text class="cart-count-num">{{item.num}}</text>
-           <text class="cart-count-add">+</text>
+         <view class="cart-count-box" >
+           <text bindtap="downNum" data-index="{{index}}" class="cart-count-down">-</text>
+           <text class="cart-count-num" >{{item.num}}</text>
+           <text bindtap="upNum" data-index="{{index}}" class="cart-count-add">+</text>
          </view>
-         <text class="cart-del">x</text>
+         <text class="cart-del" data-index="{{index}}" bindtap="deleteGoods">x</text>
       </view>
     </view>
 

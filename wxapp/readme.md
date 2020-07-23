@@ -25,3 +25,19 @@
     切页面 
   -  小程序里css rpx
      所有手机的宽度都是750rpx 
+
+
+ 小程序 
+    WXML + WXSS + JS
+    wx.request    setData
+ 网页
+    HTML + CSS + JS
+
+    HTTP协议  GET /banners?a=1  data 
+ 后端 接口的形式
+
+
+ 1. 看页面，抽象出状态数据 放入data里
+ 2. onload 生命周期与后端交流，取出数据
+ 3. AppData 调试工具看数据是否正常显示
+ 4. wxml 显示数据

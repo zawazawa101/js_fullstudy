@@ -15,6 +15,12 @@ Page({
     let selectAllStatus = this.data.selectAllStatus
     selectAllStatus = !selectAllStatus
     let carts = this.data.carts
+    if(carts.length==0){
+      this.setData({
+        selectAllStatus: false
+      })
+      return 0
+    }
     // 把carts数据里面的每一条数据里面的select改成false
     for(var i = 0; i < carts.length; i++){
       carts[i].selected = selectAllStatus
@@ -23,6 +29,7 @@ Page({
       selectAllStatus: selectAllStatus,
       carts: carts
     })
+    
     this.getTotalPrice()
   },
   selectList(e){
@@ -62,6 +69,42 @@ Page({
     this.setData({
       totalPrice: totalPrice.toFixed(2)
     })
+  },
+  downNum(e){
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    let num =  `carts[${index}].num`
+    if(carts[index].num > 1){
+      carts[index].num = carts[index].num-1
+    }
+    this.setData({
+      [num]: carts[index].num
+    }) 
+    this.getTotalPrice()
+  },
+  upNum(e){
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    let num =  `carts[${index}].num`
+    this.setData({
+      [num]: carts[index].num+1
+    })
+    this.getTotalPrice()
+
+  },
+  deleteGoods(e){
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    carts.splice(index,1)
+    this.setData({
+      carts: carts
+    })
+    if(carts.length==0){
+      this.setData({
+        selectAllStatus: false
+      })
+    }
+    this.getTotalPrice()
   },
   /**
    * 生命周期函数--监听页面加载
