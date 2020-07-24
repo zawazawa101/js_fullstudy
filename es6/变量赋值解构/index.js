@@ -73,3 +73,9 @@
 // //数值和布尔值的解构赋值
 // let {toString: s} = 123
 
+let a = 2
+let b = 2
+const set = new Set()
+set.add(a)
+set.add(b)
+console.log(set)

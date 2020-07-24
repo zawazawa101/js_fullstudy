@@ -164,19 +164,19 @@ h3 {
 }
 .TalionNav .info p {
   font-size: 11px;
-  line-height: 16;
+  line-height: 16px;
   color: #818181;
   margin: 0;
 }
 .TalionNav .btn {
   width: 80px;
   height: 30px;
-  border-right: 15px;
+  border-radius: 15px;
   text-align: center;
   font-size: 13px;
-  line-height: 30;
+  line-height: 30px;
 }
-.TalionNav .btn .green {
+.TalionNav .btn.green {
   background-color: #42bd56;
   color: #fff;
 }

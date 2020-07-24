@@ -1,8 +1,4 @@
-var a = []
-var b = 1
-if(a == []){
-  b = 2
-}else{
-  b = 3
+function add2(x,y){
+  sum = x + y
+  console.log('66')
 }
-console.log(b)

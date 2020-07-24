@@ -1,26 +1,5 @@
-/**
- * @param {string[]} strs
- * @return {string}
- */
-// var longestCommonPrefix = function(strs) {
-//   var str1 = ""
-//     for(var i = 0; i < strs[0].length ; i++){//
-//       var temp = strs[0][i]
-//      for(var j = 1; j < strs.length; j++){
-//        if(temp != strs[j][i]){
-//          return str1 
-//        }
-//        if(j == strs.length - 1){
-//         str1 += temp
-//        }
-//       }   
-//     }
-//    return str1
-// };
-// console.log(longestCommonPrefix(["flower","flow","flight"]))
 
-
-
+//求字符串数组的公共前缀
 var longestCommonPrefix = function(strs) {
   if (strs.length <= 0) { //如果字符数组长度为0，不用做比较，直接返回空字符串
       return "";
@@ -45,4 +24,4 @@ var longestCommonPrefix = function(strs) {
 var s = ["flower", "flow", "floght"];
 longestCommonPrefix(s);
 var str = longestCommonPrefix(s);
-console.log(str);
+console.log(str)
