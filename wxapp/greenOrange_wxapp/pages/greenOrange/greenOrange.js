@@ -5,9 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      isSelected: true
   },
-
+  selected(){
+    let isSelected = this.data.isSelected
+    if(isSelected){
+      this.setData({
+        isSelected: false
+      })
+    }else{
+      this.setData({
+        isSelected: true
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
