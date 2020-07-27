@@ -5,6 +5,9 @@
   bottom: 0;
   left: 0;right: 0;
 }
+div{
+  box-sizing: border-box;
+}
 .page__bd{
   height: 100%;
   background-color: #f5fafe;
@@ -31,4 +34,24 @@
 }
 .tap.show{
   display: block;
+}
+.title{
+  width: 100%;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+.weui-media-box_appmsg,
+.weui-cells{
+  background-color: #fff; 
+  margin-bottom: 10px;
+}
+.weui-media-box__thumb{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.weui-cell_example{
+  background-color: #fff; 
 }
