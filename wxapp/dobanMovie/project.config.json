@@ -5,35 +5,28 @@
 	},
 	"setting": {
 		"urlCheck": true,
+		"scopeDataCheck": false,
+		"coverView": true,
 		"es6": true,
-		"enhance": false,
 		"postcss": true,
+		"compileHotReLoad": false,
 		"preloadBackgroundData": false,
 		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
 		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
+		"newFeature": false,
 		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
 		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"nodeModules": false,
+		"enhance": false,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
 	"appid": "wxccac26a08dbe57b0",
-	"projectname": "english_fullstack_app",
+	"projectname": "dobanMovie",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -50,11 +43,11 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
+		"game": {
 			"current": -1,
 			"list": []
 		},
-		"game": {
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
@@ -64,14 +57,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/greenOrange/greenOrange",
-					"pathName": "pages/greenOrange/greenOrange",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }
