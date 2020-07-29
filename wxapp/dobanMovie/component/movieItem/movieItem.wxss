@@ -22,5 +22,5 @@
 }
 .score-wrapper{
   display: flex;
-  align-items: start;
+  margin-top: -20rpx;
 }

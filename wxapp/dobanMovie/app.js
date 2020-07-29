@@ -7,7 +7,7 @@ App({
     wx.setStorageSync('logs', logs)
     // 豆瓣接口
     wx.db = {}
-    wx.db.url = () => {
+    wx.db.url = (url) => {
       return `https://api.douban.com${url}`
     }
 

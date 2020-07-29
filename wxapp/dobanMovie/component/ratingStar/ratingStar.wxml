@@ -1,5 +1,5 @@
 <!--component/ratingStar/ratingStar.wxml-->
-<view class="">
+<view class="imageUrl-container">
   <block wx:for="{{imageUrl}}" wx:key="index">
     <image class="img" src="{{item}}"/>
   </block>
