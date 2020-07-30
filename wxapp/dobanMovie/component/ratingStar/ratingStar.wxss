@@ -1,7 +1,4 @@
 /* component/ratingStar/ratingStar.wxss */
-.imageUrl-container{
-}
-.img{
-  width: 24rpx;
-  height: 24rpx;
+.star-wrapper{
+  display: flex;
 }

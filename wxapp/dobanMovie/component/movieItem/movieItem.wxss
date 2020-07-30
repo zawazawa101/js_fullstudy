@@ -22,5 +22,7 @@
 }
 .score-wrapper{
   display: flex;
-  margin-top: -20rpx;
+  align-items: center;
+  font-size: 24rpx;
+  justify-content: space-between;
 }

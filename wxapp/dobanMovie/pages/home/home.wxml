@@ -1,10 +1,11 @@
-<!--pages/home/home.wxml-->
-<nav-bar title = "首页" statusBarColor = "#42BD55" navBarColor="#42BD55" titleColor="#fff"></nav-bar>
-  <view>
-    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+<!-- pages/home/home.wxml -->
+<nav-bar title="首页" statusBarColor="#42BD55" navBarColor="#42BD55" titleColor="#fff"></nav-bar>
+<view>
+  <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+  <block wx:for="{{allMovies}}">
     <view class="row">
       <view class="title-wrapper">
-        <view class="title">影院热映</view>
+        <view class="title">{{item.title}}</view>
         <view class="title-right">
           <view class="more">查看更多</view>
           <view class="arrow"></view>
@@ -12,8 +13,10 @@
       </view>
       <scroll-view scroll-x="{{true}}" class="scroll-view_movie">
         <!-- 组件：一部电影 -->
-        <movieItem class="item"></movieItem>>
+        <block wx:for="{{item.movies}}" wx:key="index" wx:for-item="movie">
+          <movieItem class="item" movie="{{movie}}"></movieItem>
+        </block>
       </scroll-view>
     </view>
-
-  </view>
+  </block>
+</view>

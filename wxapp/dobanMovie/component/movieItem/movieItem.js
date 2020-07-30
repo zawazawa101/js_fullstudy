@@ -3,8 +3,12 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {
+  properties: {// 接收父组件
+    movie:{
+      type: Object,
+      value: {}
 
+    }
   },
 
   /**
