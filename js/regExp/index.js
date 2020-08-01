@@ -71,6 +71,6 @@ let tel = '13826864511'
 
 let pat = /^1([3-9])\d{9}$/
 
-let pat = 
+// let pat = 
 
 console.log(pat.test(tel))

@@ -6,33 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /* .wrapper {
-      background: #000;
-      display: flex;
-      height: 400px;
-      width: 400px;
-      vertical-align: middle;
-    }
-
-    .test {
-      width: 100px;
-      height: 100px;
-      background-color: #fff;
-
-    } */
   </style>
 </head>
 
 <body>
-  <div class="wrapper" style="width: 100vw;height: 400px; padding: 20px; background-color: black;">
-    <div class="content" style="display: flex; height: 100%; width: 100%;">
-      <div class="test" style="flex:1 ;background-color: red">
-        
-      </div>
-      <div class="test"  style="flex:1 ;background-color: blue">
-      </div>
-    </div>
-  </div>
+    <input type='text' id='txt1' /> 
+    <select id='select'>
+    <option value='+'>+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    </select>
+    <input type='text' id='txt2' /> 
+    <input type='button' value=' = '  onclick = 'count()'/> <!--通过 = 按钮来调用创建的函数，得到结果--> 
+    <input type='text' id='fruit'  />   
+    
+
+    <script src="./test.js"></script>
 </body>
 
 </html>
