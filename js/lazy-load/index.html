@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .img-item{
+      display: block;
+      height: 400px;
+      margin-bottom: 30px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171956&di=513c4818e889eda40289c73029eb48c6&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-10-18%2F5da980445625b.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171955&di=599844d76eb67895e243677b1bbdc073&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F1b92862829cb9c99aa5e68605cf1e3cee2fc72dd.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171954&di=efb05548ce63f6ecfd65f834a801d0b6&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-08-26%2F5d63a0b93ebc5.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171954&di=04987ea580fda545e7e4a0f777df4d44&imgtype=0&src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1113%2F062120104927%2F200621104927-3-1200.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171953&di=33085f3be954fe68a5be33f6d6cc36d0&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fc35a4dc56599bb5aac9b7ae780d1d3f4ff84da73.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171951&di=2344d66d12e754c849bceb48103bf269&imgtype=0&src=http%3A%2F%2Fwww.icey8.com%2Fpic.php%3Furl%3Dresource%2Fnews%2F2019%2F08%2F30%2F1567140771799380.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171948&di=6b49f1aa35fd44df1df10cdaa8a8afce&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F57ec7af6e4784769c9d60f1bc11c702e44bc59e3.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171948&di=9fe103b152a21e295dd24d6123db520f&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F9eb90176f2d51d7cf64c402cd9ed47e9275fc9a7.jpg" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604264210&di=96f8483032803977a97ecdc8aa63f3ac&imgtype=0&src=http%3A%2F%2Fpics3.baidu.com%2Ffeed%2F7acb0a46f21fbe09114e74ebe226cc368644ad8d.jpeg%3Ftoken%3D32866b49bc4d9d2a9665a927ee3377c0%26s%3D2A945D85595386C69675F48F0300E0C1" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604264209&di=e559f7655ec27fa3fc9fba428e0bf233&imgtype=0&src=http%3A%2F%2Fpics5.baidu.com%2Ffeed%2Ffcfaaf51f3deb48ff88ff41cc3a3b12c2ff5784b.jpeg%3Ftoken%3D82fb75ecc02f293f8ac3191967fe89e9%26s%3D38209F1D144376ED860594E00300E021" alt="">
+  <img class="img-item" src="" lazyload="true" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596604171953&di=eae61c3513c64680d1b06fb7d3bd9d0a&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F75373743c3ac8e706e0424d4ef8ea028401c9772.jpg" alt="">
+  
+  <script>
+    // 拿到可视区域的高度
+    let viewHeight = document.documentElement.clientHeight
+   
+    function lazyLoad() {
+      let eles = document.querySelectorAll('img[data-original][lazyload]') 
+      // console.log(eles)
+      // 判断每一个img是否出现在了可视区域内
+      // Array.from(eles).forEach(item => {
+      //   console.log(item)
+      // })
+      Array.prototype.forEach.call(eles, item => {
+        let rect;
+        rect = item.getBoundingClientRect() // 用于获取页面上某个元素的左上右下分别相对于浏览器视窗的位置
+        console.log(rect)
+        if(rect.bottom >= 0 && rect.top < viewHeight) { // 在可视区域内
+          !function() {
+            let img = new Image()
+            img.src = item.dataset.original
+            img.onload = function() {
+              item.src = img.src
+            }
+            item.removeAttribute('data-original') // 移除属性下次不再遍历
+            item.removeAttribute('lazyload')
+          }()
+        }
+      })
+
+    }
+    lazyLoad()
+    
+    document.addEventListener('scroll', lazyLoad)
+  </script>
+
+</body>
+</html>
