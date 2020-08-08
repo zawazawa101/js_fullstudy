@@ -1,0 +1,80 @@
+/* compontents/calendar/calendar.wxss
+.calendar-title{
+  display: flex;
+  padding: 0 20rpx;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  line-height: 50rpx;
+  height: 50rpx;
+  background-color: #f5f5f5;
+  margin-right: 30rpx;
+  width: 50rpx;
+}
+.title{
+  width: 240rpx;
+}
+.today{
+  margin-left: 200rpx;
+  width: 90rpx;
+} */
+.calendar{
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+.calendar-title{
+  padding: 0 20rpx;
+  text-align: left;
+}
+.calendar-title .ctrl{
+  padding: 0 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+}
+.calendar-title .item{
+  display: inline-block;
+  line-height: 50rpx;
+  vertical-align: middle;
+}
+.calendar-title .title{
+  min-width: 300rpx;
+  text-align: center;
+}
+.calendar-title .today{
+  float: right;
+}
+.calendar-week{
+  margin-top: 10rpx;
+  display: flex;
+  text-align: center;
+  padding: 20rpx 10rpx;
+  border-top:1rpx solid #e0e0e0;
+  border-bottom:1rpx solid #e0e0e0;
+  background-color: #f5f5f5;
+}
+.item{
+  flex: 1;
+}
+/* 日期 */
+.calendar-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 10rpx;
+}
+.calendar-container .grid{
+  width: 14.2%;
+  line-height: 70rpx;
+  position: relative;
+  z-index: 1;
+}
+.calendar-container .grid.gray{
+  color:#ccc
+}
+.calendar-container .grid .wrap.select{
+  background-color: rgb(49, 120, 228);
+  border-radius: 10rpx;
+  color: white;
+  
+}

@@ -105,9 +105,9 @@ function foo() {
 
 var obj = {
   a: 2,
-  foo: foo()
+  foo: foo
 }
-
 var bar = obj.foo
+
 var a = 'hello'
 

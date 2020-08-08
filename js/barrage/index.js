@@ -187,7 +187,6 @@ function send() {
   canvasBarrage.add(obj)
   $txt.value =""
 }
-$btn.addEventListener('click', send)
 
 // document.onkeydown = function(ev){
 //   let event = ev
