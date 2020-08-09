@@ -1,5 +1,6 @@
 {
   "pages":[
+    "components/testing/tesing",
     "pages/index/index",
     "pages/test/test"
   ],

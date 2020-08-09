@@ -1,2 +1,7 @@
 <!--pages/test/test.wxml-->
-<image lazy-load="{{true}}" bindload="handleImageLoad" mode="widthFix" wx:for="{{10}}" src="https://i0.hdslb.com/bfs/archive/070464145d80cc0415591e4792bc01ff0c52edab.jpg@880w_388h_1c_95q" />
+<image lazy-load="{{true}}" bindload="handleImageLoad" mode="widthFix" wx:for="{{2}}" src="https://i0.hdslb.com/bfs/archive/070464145d80cc0415591e4792bc01ff0c52edab.jpg@880w_388h_1c_95q" />
+<wxs src="../../wxs/info.wxs" module="jjp" />
+<text>{{jjp.b(price, 2)}}</text>
+<!-- <tesing title='嘿嘿嘿' color='blue'></tesing> -->
+<tesing bind:jiajiajia='handleinccc' titleclass = 'red'></tesing>
+<text>{{count}}</text>

@@ -2,3 +2,6 @@
 image{
   width: 100%;
 }
+.red{
+  color: blue
+}

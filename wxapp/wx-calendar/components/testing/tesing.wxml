@@ -1,0 +1,3 @@
+<!--components/testing/tesing.wxml-->
+<view class="titleclass">{{title}}</view>
+<button size="mini" bind:tap="handleIncream">+1</button>

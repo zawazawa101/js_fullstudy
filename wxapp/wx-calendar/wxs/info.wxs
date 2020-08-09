@@ -1,0 +1,11 @@
+
+  var a = function(num1, num2) {
+    return num1 + num2
+  }
+  var b = function(value, number){
+    return value.toFixed(number)
+  }
+  module.exports = {
+    a: a,
+    b: b
+  }

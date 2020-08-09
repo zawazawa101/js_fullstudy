@@ -69,6 +69,13 @@
 					"id": -1,
 					"name": "pages/test/test",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "components/testing/tesing",
+					"pathName": "components/testing/tesing",
 					"scene": null
 				}
 			]
