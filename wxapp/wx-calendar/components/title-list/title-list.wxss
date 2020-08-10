@@ -1,0 +1,24 @@
+/* components/title-list/title-list.wxss */
+.container{
+  display: flex;
+  height: 88rpx;
+}
+.item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  color: red;
+  position: relative;
+}
+.active::before{
+  content: '';
+  width: 80rpx;
+  height: 4rpx;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 85rpx;
+}

@@ -40,7 +40,13 @@
       content: '\e66f';
       color: #ffa822;
     }
-    
+    .ddd{
+      display: inline-block;
+    }
+    .ddd::before{
+      content: "222";
+      color: yellow;
+    }
   </style>
 </head>
 <body>
@@ -51,5 +57,6 @@
     <input type="radio" name="rate">
     <input type="radio" name="rate">
   </div>
+  <div class="ddd"></div>
 </body>
 </html>

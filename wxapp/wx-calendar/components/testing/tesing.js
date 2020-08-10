@@ -35,7 +35,8 @@ Component({
    */
   methods: {
     handleIncream() {
-      console.log('--------------------------')
+     
+      this.triggerEvent('jiajiajia', {}, {})
     }
   }
 })

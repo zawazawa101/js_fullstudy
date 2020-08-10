@@ -17,7 +17,9 @@ Page({
   onLoad: function (options) {
 
   },
-
+  getInfo(event) {
+    console.log(event)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -60,7 +62,9 @@ Page({
 
   },
   handleinccc() {
-    console.log('gggg')
+    this.setData({
+      count: ++this.data.count
+    })
   },
   /**
    * 用户点击右上角分享

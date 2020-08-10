@@ -1,5 +1,6 @@
 {
   "pages":[
+    "components/title-list/title-list",
     "components/testing/tesing",
     "pages/index/index",
     "pages/test/test"

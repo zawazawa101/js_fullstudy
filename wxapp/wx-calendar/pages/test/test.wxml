@@ -5,3 +5,4 @@
 <!-- <tesing title='嘿嘿嘿' color='blue'></tesing> -->
 <tesing bind:jiajiajia='handleinccc' titleclass = 'red'></tesing>
 <text>{{count}}</text>
+<title-list title="{{['衣服', '鞋子', '裤子']}}" bind:handle="getInfo"></title-list>

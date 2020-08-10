@@ -1,0 +1,8 @@
+<!--components/title-list/title-list.wxml-->
+<view class="container">
+  <block wx:for="{{title}}">
+    <view class="item {{currentIndex == index ? 'active' : '' }}" data-index="{{index}}" bind:tap="handleIndex" >
+      {{item}}
+    </view>
+  </block>
+</view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "tesing":"../../components/testing/tesing"
+    "tesing":"../../components/testing/tesing",
+    "title-list":"../../components/title-list/title-list"
   }
 }
