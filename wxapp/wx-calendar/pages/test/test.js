@@ -1,4 +1,5 @@
 // pages/test/test.js
+import request from '../../service/service'
 Page({
 
   /**
@@ -14,8 +15,43 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  // 巨low的封装
+  // request() {
+  //   wx.request({
+  //     url,
+  //     data:{}, // 请求数据要传递的数据
+  //     method: "get", // 默认为get方式请求数据
+  //     success: res => {
+  //       console.log(res)
+  //     }
+  //   })
+  // },
+  // 函数封装
+  // request(options){
+  //   wx.request({
+  //     url: options.url,
+  //     data: options.data || {},
+  //     method: options.method || 'get',
+  //     success: res => {
+  //       console.log(res)
+  //     }
+  //   })
+  
+  // },
 
+
+  onLoad: function (options) {
+    // this.request()
+    // this.request({
+    //   url: 'http://neteasecloudmusicapi.zhaoboy.com/banner',
+    // })
+    request({
+      url: 'http://neteasecloudmusicapi.zhaoboy.com/banner',
+    }).then(res => {
+      console.log(res)
+    }).catch(res => {
+      console.log(res)
+    })
   },
   getInfo(event) {
     console.log(event)
