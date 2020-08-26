@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
   <title>Document</title>
+  <style>
+    .red{
+      color:red
+    }
+    [v-cloak]{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,11 +28,25 @@
       <span v-text="newMessage"></span></br>
       <span v-html="newMessage"></span>
     </div> -->
-    <div class="count">
+    <!-- <div class="count">
       <p>{{count}}</p>
       <button v-on:click='add'>+</button>
       <button @click = "reduce">-</button>
-    </div>
+    </div> -->
+<!-- 
+    <div class="model">
+      <p>{{message}}</p>
+      <p>
+        v-model: <input type="text" v-model="message" />
+      </p>
+    </div> -->
+    <!-- <div class="pic">
+      <img  v-bind:src="imgSrc"  :src=''   alt="">  
+    </div> -->
+    <!-- <div @click='addClass' v-bind:class="{red: isRed}" :class="[className1, className2]">xxxx是个sb</div> -->
+    <!-- <div v-pre>{{message}}</div> -->
+    <!-- <div v-cloak>{{message}}</div> -->
+    <div v-once></div>
   </div>
 
 
@@ -32,16 +54,20 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: "Hello Vue !",
+        // className1: active,
+        // className2: wrapper,
+        message: "Hello Vue !!!",
         newMessage: '<h2> Hello haha</h2>',
         isSure: false,
+        isRed:true,
         list: ["a", "b", "c", "d", "e"],
         people: [
           { name: 'xxx', age: 18 },
           { name: 'yyy', age: 18 },
           { name: 'zzz', age: 20 }
         ],
-        count: 0
+        count: 0,
+        imgSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598262389614&di=76ea529c8651b2961699ff1e72fec90d&imgtype=0&src=http%3A%2F%2Ft9.baidu.com%2Fit%2Fu%3D3923875871%2C1613462878%26fm%3D79%26app%3D86%26f%3DJPEG%3Fw%3D1280%26h%3D854'
       },
 
       methods: {
@@ -51,6 +77,9 @@
         },
         reduce() {
           this.count--
+        },
+        addClass(){
+          this.isRed = !this.isRed
         }
       },
       beforeCreate() {
