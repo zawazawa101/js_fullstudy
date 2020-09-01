@@ -26,18 +26,16 @@ export default {
     login() {
       if(!this.user || !this.password) {
         this.$message.error('账号和密码不能为空');
-      }else if(this.user == 'admin' && this.password == '123456') {
+      }else{
         this.$message({
-          message: '恭喜你，这是一条成功消息',
+          message: '登录成功',
           type: 'success'
         });
         this.goHome()
-      }else{
-         this.$message.error('账号和密码输入错误');
       }
     },
     goHome() {
-      this.$router.push({path: '/home'})
+      this.$router.push({name: 'Home',params: {name: this.user}})
     }
   }
 };

@@ -9,6 +9,23 @@ const routes = [
     path: '/',
     name: 'Login',
     component: () => import('@/views/Login')
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import('@/views/Home'),
+    children: [
+      {
+        path: 'user',
+        name: 'User',
+        component: () => import('@/views/user')
+      },
+      {
+        path: 'user2',
+        name: 'User2',
+        component: () => import('@/views/user2')
+      }
+    ]
   }
 ]
 
