@@ -2,19 +2,19 @@
   <div class="header">
     <div class="content-wrapper">
       <div class="avatar">
-        <img width="64" height="64" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2034740944,4251903193&fm=26&gp=0.jpg" alt="">
+        <img width="64" height="64" :src="shopInfo.avatar" alt="">
       </div>
       <div class="content">
         <div class="title">
           <span class="brand"></span>
-          <span class="name">粥品香坊</span>
+          <span class="name">{{shopInfo.name}}</span>
         </div>
         <div class="description">
-          蜂鸟专送/38分钟送达
+          {{shopInfo.description}}/{{shopInfo.deliveryTime}}分钟送达
         </div>
-        <div class="support">
-          <img class="support-ico" src="./brand@2x.png" alt="">
-          <span class="text">在线支付满28减9</span>
+        <div class="support" v-if="shopInfo.supports">
+          <support-ico :size=1 :type="shopInfo.supports[0].type"></support-ico>
+          <span class="text">{{shopInfo.supports[0].description}}</span>
         </div>
       </div>
     </div>
@@ -22,8 +22,27 @@
 </template>
 
 <script>
+import SupportIco from '@/components/support-ico/support-ico'
 export default {
-
+  props: {
+    shopInfo: {
+      type: Object,
+    }
+  },
+  data() {
+    return {
+    }
+  },
+  components: {
+    SupportIco
+  }
+  // watch:{
+  //   shopInfo(val){
+  //     this.info = val;
+  //     console.log(val)
+  //   }
+  // }
+  
 };
 </script>
 
