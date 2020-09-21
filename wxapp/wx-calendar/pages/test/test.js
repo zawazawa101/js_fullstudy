@@ -7,7 +7,8 @@ Page({
    */
   data: {
     price: 26.6666666,
-    count: 0
+    count: 0,
+    title: '哈哈哈'
   },
   handleImageLoad() {
     console.log("图片加载完成")

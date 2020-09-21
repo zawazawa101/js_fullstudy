@@ -1,0 +1,44 @@
+<!-- 滑动的最小距离， 以及判断左滑还是右滑 -->
+<style>
+  .box {
+    width: 100vw;
+    height: 50vh;
+    background-color: red;
+  }
+</style>
+
+<div class="box"></div>
+<script>
+  const box = document.querySelector('.box')
+
+  box.addEventListener('mousedown', (e) => {
+    let startX = e.clientX, startY = e.clientY;
+
+    function handleUp() {
+      console.log('666')
+      document.removeEventListener('mousemove', handleMove)
+      document.removeEventListener('mouseup', handleUp)
+    }
+    function handleMove(event) {
+      let endX = event.clientX, endY = event.clientY;
+      let diffX = endX - startX, diffY = endY - startY;
+      if (diffX ** 2 + diffY ** 2 > 10000) {// 如果移动了10px
+        console.log('发生了拖动')
+      }
+      // if (Math.abs(diffX) > Math.abs(diffY)){
+      //   console.log('left or right')
+      //   if (diffX > 0) {
+      //     console.log('pan right')
+      //   }else{
+      //     console.log('pan left')
+      //   }
+      // }
+    }
+    document.addEventListener('mousemove', handleMove) // 前提 已经 down
+
+    document.addEventListener('mouseup', handleUp)
+  })
+
+
+
+</script>

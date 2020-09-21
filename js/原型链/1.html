@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 构造函数的实例化对象能通过__proto__ 找到构造函数的原型prototype
+
+    // function Person() {
+
+    // }
+
+    // var person = new Person()
+    // Grand.prototype.lastName = 'wu'
+    // function Grand() {
+
+    // }
+    // var grand = new Grand()
+
+    // Father.prototype = grand
+    // function Father() {
+    //   this.name = 'jinlong'
+    // }
+    // var father = new Father()
+    // function Son() {
+    //   this.hobbit = 'reading'
+    // }
+
+    // Son.prototype = father
+    // var son = new Son()
+    
+    // console.log(son.name,son.lastName,son.hobbit)
+
+    // //？？？
+    // console.log(son.toString())
+    // function Father() {
+    //   this.fortune = {
+    //     card: 'heilong',
+    //     crash: 8000
+    //   }
+    //  }
+    // var father = new Father()
+    // Son.prototype = father
+    // function Son() {
+    //   this.hobbit = 'reading'
+    // }
+    // var son = new Son()
+    // son.fortune.card2 = 'xxx'
+    
+    // console.log(father)
+    var obj2 = Object.create(null)
+    obj2.name = 'wn'
+  </script>
+</body>
+</html>

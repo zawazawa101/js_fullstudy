@@ -19,16 +19,18 @@ export default {
     }
   },
   methods: {
-    add() {
-      console.log('apache')
+    add(event) {
+      // console.log(event)
       if(!this.food.count) {
         this.$set(this.food, 'count', 1)
-      }else{
+      } else{
         this.food.count++
       }
+      this.$emit('add',event.target)
     },
     decrease() {
-
+      this.food.count--
+      
     }
   }
 }

@@ -2,7 +2,7 @@
   <div class="goods">
     <div class="scroll-nav-wrapper">
       <!-- 左右联动的菜单 -->
-      <cube-scroll-nav :side="true" :data="goods" :options="scrollOptions" @click="stickyChangeHandler">
+      <cube-scroll-nav :side="true" :data="goods" v-if="goods.length" :options="scrollOptions" @click="stickyChangeHandler">
         <!-- 左侧菜单 -->
         <template slot="bar" slot-scope="props">
           <cube-scroll-nav-bar
@@ -27,7 +27,6 @@
           :title="good.name">
           <ul>
             <li class="food-item" v-for="(food, index) in good.foods" :key="index">
-              
               <div class="icon">
                 <img width="57" height="57" :src="food.icon" />
               </div>
@@ -42,7 +41,7 @@
                     <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
                   </div>
                   <div class="cart-control-wrapper">
-                    <cart-control :food="food"></cart-control>
+                    <cart-control :food="food" @add="onAdd"></cart-control>
                   </div>
                 </div>
               </div>
@@ -51,33 +50,40 @@
         </cube-scroll-nav-panel>
       </cube-scroll-nav>
     </div>
+
+    <div class="shop-cart-wrapper">
+      <shop-cart :selectFoods="selectFoods"></shop-cart>
+    </div>
   </div>
 </template>
 
 <script>
-import SupportIco from '@/components/support-ico/support-ico.vue'
-import { getGoods } from '@/api'
-import CartControl from '@/components/cart-control/cart-control.vue'
+import SupportIco from '@/components/support-ico/support-ico.vue';
+import { getGoods } from '@/api';
+import CartControl from '@/components/cart-control/cart-control.vue';
+import ShopCart from '@/components/shop-cart/shop-cart.vue';
 
 export default {
   props: {
     data: {
       type: Object,
-      defalut: {}
-    }
+      defalut: {},
+    },
   },
   data() {
     return {
-      goods:[],
-      scrollOptions:{
-        click: false,
-        directionLockThreshold: 0
-      }
-    }
+      goods: [],
+      scrollOptions: {
+        click: true,
+        directionLockThreshold: 0,
+      },
+    },
   },
+
   components: {
     SupportIco,
-    CartControl
+    CartControl,
+    ShopCart
   },
   created() {
     console.log(this.data)
@@ -96,7 +102,19 @@ export default {
         })
       })
       return ret
-    }
+    },
+    selectFoods() {
+       let foods = []
+      this.goods.forEach((good) => {
+        good.foods.forEach((food) => {
+          if (food.count) {
+            foods.push(food)
+          }
+        })
+      })
+      return foods
+      }
+    
     
   },
   methods: {
@@ -110,6 +128,9 @@ export default {
     },
     stickyChangeHandler(current) {
       console.log('sticky-change', current)
+    },
+    onAdd(target) {
+      // 小球下落
     }
   }
   

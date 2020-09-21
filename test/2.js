@@ -1,5 +1,9 @@
-let initValue = 1
+function foo() {
+  var a = 2
+  bar()
+}
 
-let isValue = initValue ===0?(!!initValue):(!!initValue)
-
-console.log(isValue)
+function bar() {
+  console.log(a)
+}
+foo()

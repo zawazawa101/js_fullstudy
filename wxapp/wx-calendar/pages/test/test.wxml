@@ -6,3 +6,8 @@
 <tesing bind:jiajiajia='handleinccc' titleclass = 'red'></tesing>
 <text>{{count}}</text>
 <title-list title="{{['衣服', '鞋子', '裤子']}}" bind:handle="getInfo"></title-list>
+<navigator url="../index/index">跳转到首页</navigator>
+<navigator open-type="navigate" url="../index/index">跳转到首页</navigator>
+
+<navigator url="../index/index?name=why&&age={{17}}">跳转传递数据</navigator>
+<view>{{title}}</view>

@@ -1,0 +1,29 @@
+<style>
+  .box {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+</style>
+
+<div class="box"></div>
+<script>
+  const box = document.querySelector('.box')
+
+  box.addEventListener('mousedown', () => {
+    document.addEventListener('mousemove', handleMove) // 前提 已经 down
+     
+    document.addEventListener('mouseup',handleUp)
+  })
+
+  function handleMove(event){
+    box.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`
+    
+  }
+  function handleUp() {
+    console.log('666')
+    document.removeEventListener('mousemove', handleMove)
+    document.removeEventListener('mouseup', handleUp)
+  }
+
+</script>
