@@ -1,4 +1,4 @@
-
+import register from './interface/register'
 import apiLogin from './interface/login'
 
 const install = Vue => {
@@ -12,7 +12,8 @@ const install = Vue => {
       get () {
         return Object.assign(
           {},
-          apiLogin
+          apiLogin,
+          register
         )
       }
     }
