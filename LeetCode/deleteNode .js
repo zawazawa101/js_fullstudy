@@ -37,4 +37,5 @@ var deleteNode = function(head, val) {
     current = current.next
   }
   return headNode.next
+  // meisbitao
 };
