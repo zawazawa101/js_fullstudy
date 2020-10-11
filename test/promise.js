@@ -4,15 +4,15 @@
 // resolve 成功阶段
 // reject 失败阶段
 
-  new Promise((resolve, reject) => {
-    //  resolve('成功状态')
-    reject('拒绝状态')
-  }).then(
-    value => {
-      console.log(value)
-    },
-    reason => {
-      console.log(reason)
-    }
-  )
- console.log('666')
+//   new Promise((resolve, reject) => {
+//     //  resolve('成功状态')
+//     reject('拒绝状态')
+//   }).then(
+//     value => {
+//       console.log(value)
+//     },
+//     reason => {
+//       console.log(reason)
+//     }
+//   )
+//  console.log('666')

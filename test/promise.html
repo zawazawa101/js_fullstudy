@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <script src="./promise.js"></script>
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+  <script>
+    //点击 a、b、c 分别输出？
+    let li = document.querySelectorAll("li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", () => {
+        console.log(i);
+      })
+    }
+  </script>
 </body>
+
 </html>
