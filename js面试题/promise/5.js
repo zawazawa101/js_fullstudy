@@ -10,5 +10,6 @@ B.prototype  = new A()// ??
 B.prototype.swim = function() {
 
 }
+// dddd
 const b = new B('hh', 'yy');
 console.log(b.email);
