@@ -80,7 +80,7 @@
 6.
 // CORS 设置 CORS 的头部字段
 // cross origin resource share
-// Access-control-allow-origin
-// Access-control-allow-method
+// Access-control-allow-origin: *
+// Access-control-allow-method: 
 // Access-control-allow-headers: content-type
 

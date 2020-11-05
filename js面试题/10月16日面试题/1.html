@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <h2>
+      <h1>
+        <hr />
+      </h1>
+      <h1>
+        <h2>
+          <h3></h3>
+        </h2>
+      </h1>
+    </h2>
+  </div>
+
+
+  <script>
+    // 遍历这颗 DOM 树
+    let html = document.documentElement
+    // console.log(html.children);
+    let obj = {}
+    
+    function walk(node, obj) {
+      let tagN = node.tagName
+      if(tagN[0] == 'h' || tagN[0] == 'H') {
+        obj[tagN] = obj[tagN] ? obj[tagN] + 1 : 1
+      }
+      if (node.children) {
+        for (let children of node.children) {
+          walk(children, obj)
+        }
+      }
+      return obj
+    }
+    
+    console.log(walk(html, obj));
+  </script>
+</body>
+
+</html>
