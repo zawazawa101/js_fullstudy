@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 点击相应的li能输出对应的内容 -->
+  <ul id="test">
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+  </ul>
+  <script>
+    let ul = document.querySelector('#test')
+    ul.addEventListener('click', (e) => {
+      console.log(window.event);
+      // let event = e || window.event
+      // let target = event.target || event.srcElement
+      console.log(e.target.innerText);
+    })
+    // let liArr = document.querySelectorAll('li')
+    // for(let i = 0; i < liArr.length; i++) {
+    //   liArr[i].addEventListener('click', (e) => {
+    //     console.log(e.target);
+    //   })
+    // }
+  </script>
+</body>
+
+</html>
