@@ -1,3 +1,4 @@
+// 二进制相加
 function binaryAdd(num1, num2) {
   // TODO
   let arr = []
@@ -8,7 +9,6 @@ function binaryAdd(num1, num2) {
     let sum = a + b + carry;
     arr.unshift(sum % 2)
     sum >= 2 ? carry = 1 : carry = 0
-    arr.unshift()
   }
   if(carry) {
     arr.unshift(carry)
